@@ -1,0 +1,11 @@
+<header style="margin-bottom:2em;">
+  <h1>Homospiritus</h1>
+  <p>
+    <ul>
+      <li><a href="<%= blog_path %>" title="All Posts">All Posts</a></li>
+      <% @categories.all.each do |c| %>
+        <li><a href="<%= blog_category_path(c) %>" title="<%= c.name %>"><%= c.name %></a></li>
+      <% end %>
+    </ul>
+  </p>
+</header>

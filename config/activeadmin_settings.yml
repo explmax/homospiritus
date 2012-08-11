@@ -17,13 +17,3 @@
 #   Link setting value expected to be in a format of: (link title) http://link.url
 #
 # ================================================================================
-
-General:
-  Blog Title:
-    description:    You can change blog title with this setting
-    default_value:  <%= Rails.application.class.parent_name %>
-
-  Delivered By:
-    description:    Link in the footer of the website
-    default_value:  (Slate Studio) http://slatestudio.com
-    type:           link

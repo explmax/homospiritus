@@ -1,8 +1,14 @@
 Homospiritus::Application.routes.draw do
+  # Website
+  root :to => 'flatpages#movement'
+  get '/people',    :to => 'flatpages#people'
+  get '/seminars',  :to => 'flatpages#seminars'
+  get '/friends',   :to => 'flatpages#friends'
+  
   mount ActiveadminBlog::Engine => '/blog'
 
+  # Admin
   mount ActiveadminSettings::Engine => '/admin'
-
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -53,10 +59,6 @@ Homospiritus::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

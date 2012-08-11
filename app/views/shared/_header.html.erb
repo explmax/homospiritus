@@ -1,0 +1,46 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <a class="brand" href="/">Хомо спиритус</a>
+ 
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li <% if @nav == "movement" %>class="active"<% end %>>
+            <a href="/" title="Движение «За Творца»">Движение «За Творца»</a>
+          </li>
+          <li <% if @nav == "people" %>class="active"<% end %>>
+            <a href="/people" title="Круг веры">Круг веры</a>
+          </li>
+          <li <% if @nav == "seminars" %>class="active"<% end %>>
+            <a href="/seminars" title="Наши семинары">Наши семинары</a>
+          </li>
+          
+          <li class="divider-vertical"></li>
+          
+          <li <% if @nav == "blog" %>class="active"<% end %>>
+            <a href="/blog" title="Блог">Блог</a>
+          </li>
+          <li <% if @nav == "forum" %>class="active"<% end %>>
+            <a href="#" title="Обсуждения">Обсуждения</a>
+          </li>
+          
+          <li class="divider-vertical"></li>
+          
+          <li <% if @nav == "friends" %>class="active"<% end %>>
+            <a href="/friends" title="Друзья">Друзья</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
