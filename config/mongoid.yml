@@ -1,0 +1,10 @@
+development:
+  host: localhost
+  database: homospiritus
+
+test:
+  host: localhost
+  database: homospiritus_test
+
+production:
+  uri: <%= ENV["MONGO_URL"] %>
