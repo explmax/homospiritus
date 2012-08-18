@@ -17,3 +17,11 @@
 #   Link setting value expected to be in a format of: (link title) http://link.url
 #
 # ================================================================================
+
+Contacts:
+  Skype:
+    description:    Skype name of the contact person
+    default_value:  mediator-2012
+  Email:
+    description:    Website administrator email address
+    default_value:  polezhaevaolga@yandex.ru
