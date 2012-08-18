@@ -1,6 +1,7 @@
 Homospiritus::Application.routes.draw do
   # Website
   root :to => 'flatpages#movement'
+
   get '/people',    :to => 'flatpages#people'
   get '/seminars',  :to => 'flatpages#seminars'
   get '/friends',   :to => 'flatpages#friends'

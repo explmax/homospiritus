@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <title><%= yield :extra_title %>Хомо спиритус</title>
+  <title><%= yield :extra_title %>Движение «За Творца»</title>
+  
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,13 @@
 </head>
 <body>
   <%= render "shared/header" %>
-
-  <div class="container">
+  
+  <div id="main">
     <%= yield %>
   </div>
+
+  <%= render "shared/footer" %>
+
+  <%= javascript_include_tag "application" %>
 </body>
 </html>

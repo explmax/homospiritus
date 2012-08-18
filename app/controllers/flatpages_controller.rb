@@ -1,14 +1,14 @@
 class FlatpagesController < ApplicationController
   def movement
-    @nav = "movement"
+    @nav = "about"
   end
 
   def people
-    @nav = "people"
+    @nav = "about"
   end
 
   def seminars
-    @nav = "seminars"
+    @nav = "about"
   end
 
   def friends
