@@ -1,8 +1,36 @@
 <footer id="footer">
-  <div class="row">
-  </div>
+  <section class="links">
+    <div class="row">
+      <div class="four mobile-four columns">
+        <h5 class="header"><%= link_to "Движение «За Творца»", "/" %></h5>
+        <div class="row">
+          <div class="six mobile-two columns">
+            <ul class="">
+              <li></li>
+              <li><%= link_to "Круг веры",      people_path %></li>
+              <li><%= link_to "Наши семинары",  seminars_path %></li>
+              <li><%= link_to "Наши друзья",    "/" %></li>
+            </ul>
+          </div>
+          <div class="six mobile-two columns">
+            <ul class="">
+              <li><%= link_to "Регистрация",  "/" %></li>
+              <li><%= link_to "Материалы",    "/" %></li>
+              <li><%= link_to "Обсуждения",   "/" %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-  <div class="contacts">
+      <div class="four columns">
+      </div>
+
+      <div class="four columns">
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts">
     <div class="row">
       <div class="four columns">© 2012 Движение «За Творца»</div>
       <div class="four columns">
@@ -12,5 +40,5 @@
         <a class="email" href="mailto:<%= settings_value 'Email' %>"><%= settings_value 'Email' %></a>
       </div>
     </div>
-  </div>
+  </section>
 </footer>

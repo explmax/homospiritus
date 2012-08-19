@@ -1,6 +1,32 @@
 #footer {
   color:#999;
   margin-top:5em;
+  
+  .columns {
+    font-size:.9em; 
+  }
+
+  .links {
+    background:#292727;
+
+    a:hover {
+      text-decoration:underline;
+      color:#fff;
+    }
+
+    .header a {
+      color:#fff;
+    }
+
+    ul {
+      list-style:none;
+
+      a {
+        font-size:.9em;
+        color:#999;
+      }
+    }
+  }
 
   .contacts {
     background:#1C1C1C;
@@ -8,7 +34,6 @@
 
     .columns {
       line-height:24px;
-      font-size:.9em; 
     }
 
     a {
