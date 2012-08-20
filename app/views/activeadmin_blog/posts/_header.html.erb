@@ -1,8 +1,0 @@
-<header id="blog_header">
-  <ul class="nav nav-pills">
-    <li class="active"><a href="<%= blog_path %>" title="Все посты">Все посты</a></li>
-    <% @categories.all.each do |c| %>
-      <li><a href="<%= blog_category_path(c) %>" title="<%= c.name %>"><%= c.name %></a></li>
-    <% end %>
-  </ul>
-</header>

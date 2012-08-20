@@ -1,35 +1,32 @@
-<div class="container">
-  <%= render :partial => "header" %>
-
-  <div style="margin-bottom:2em;">
-    <!-- TITLE -->
-    <h2><%= @post.title %></h2>
-
-    <!-- DATE & CATEGORIES -->
-    <p>
-      <span>Published at <em><%= @post.date %></em> <% if @post.categories.size > 0 %>in:<% end %></span>
-      <% if @post.categories.size > 0 %>
-        <ul>
-          <% @post.categories.each do |c| %>
-          <li><a href="<%= blog_category_path(c) %>" title="<%= c.name %>"><%= c.name %></a></li>
+<div class="row" id="blog">
+  <div class="nine mobile-four columns">  
+    <div class="row">
+      <div class="two mobile-one columns">
+        <section class="meta">
+          <date><%= @post.date %></date>
+          
+          <% if @post.categories.size > 0 %>
+            <ul class="none categories">
+            <% @post.categories.each do |c| %>
+              <li><%= link_to c.name, blog_category_path(c), :class => "round label" %></li>
+            <% end %>
+            </ul>
           <% end %>
-        </ul>
-      <% end %>
-    </p>
 
-    <!-- CONTENT -->
-    <div><%= @post.content.html_safe %></div>
+        </section>
+      </div>
 
-    <!-- TAGS -->
-    <% if @post.tags? %>
-      <span>Tags:</span>
-      <ul>
-        <% @post.tags.split(',').each do |t| %>
-          <li><%= link_to t, blog_tag_path(t) %></li>
-        <% end %>
-      </ul>
-    <% end %>
+      <div class="ten mobile-three columns">
+        <h3><%= @post.title %></h3>
+
+        <p><%= @post.content.html_safe %></p>
+      </div>
+    </div>
   </div>
 
-  <%= render :partial => "footer" %>
+  <div class="three mobile-four columns">
+    <section class="sidebar">
+      <%= render :partial => "sidebar" %>
+    </section>
+  </div>
 </div>

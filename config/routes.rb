@@ -4,14 +4,14 @@ Homospiritus::Application.routes.draw do
   # Website
   root :to => 'flatpages#movement'
 
-  get '/blog',        :to => 'flatpages#blog'
   get '/discussions', :to => 'discussions#index'
   get '/family',      :to => 'flatpages#family'
   
   get '/people',    :to => 'flatpages#people'
   get '/seminars',  :to => 'flatpages#seminars'
 
-  mount ActiveadminBlog::Engine => '/blog'
+  # Blog
+  mount_blog_at '/blog'
 
   # Admin
   mount ActiveadminSettings::Engine => '/admin'

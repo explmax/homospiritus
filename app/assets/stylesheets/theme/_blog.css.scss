@@ -1,0 +1,22 @@
+#blog {
+  .meta {
+    padding-top:1.5em;
+    text-align:center;
+  }
+
+  .sidebar {
+    padding-top:1.5em;  
+  }
+
+  a.label {
+    text-decoration:none;
+    &:hover { color:#fff; text-decoration:underline; }
+  }
+}
+
+// DESKTOP
+@media only screen and (min-width: 767px) {
+  #blog {
+    padding-top:1.5em;
+  }
+}

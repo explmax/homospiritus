@@ -1,0 +1,10 @@
+<form class="well form-search" action="<%= blog_search_path %>" method="GET">
+  <input name="q" type="text" placeholder="Поиск">
+</form>
+
+<ul class="none">
+  <li class="active"><a href="<%= blog_path %>" title="Все посты">Все посты</a></li>
+  <% @categories.all.each do |c| %>
+    <li><a href="<%= blog_category_path(c) %>" title="<%= c.name %>"><%= c.name %></a></li>
+  <% end %>
+</ul>

@@ -1,9 +1,12 @@
-<div class="container">
-  <%= render :partial => "header" %>
+<div class="row" id="blog">
+  <div class="nine mobile-four columns">  
+    <%= render :partial => "post", :collection => @posts %>
+    <%= paginate @posts %>
+  </div>
 
-  <%= render :partial => "post", :collection => @posts %>
-
-  <%= paginate @posts %>
-
-  <%= render :partial => "footer" %>
+  <div class="three mobile-four columns">
+    <section class="sidebar">
+      <%= render :partial => "sidebar" %>
+    </section>
+  </div>
 </div>
