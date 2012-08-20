@@ -17,9 +17,9 @@
           </div>
           <div class="six mobile-two columns">
             <ul>
-              <li><%= link_to "Материалы",    "/" %></li>
-              <li><%= link_to "Обсуждения",   "/" %></li>
-              <li><%= link_to "Наши друзья",    "/" %></li>
+              <li><%= link_to "Материалы",    blog_path %></li>
+              <li><%= link_to "Обсуждения",   discussions_path %></li>
+              <li><%= link_to "Наши друзья",  family_path %></li>
             </ul>
           </div>
         </div>
@@ -33,8 +33,8 @@
           <div class="six mobile-two columns offset-by-six">
             <ul>
             <% if user_signed_in? %>
-              <li><%= link_to "Профиль",  edit_user_registration_path %></li>
-              <li><%= link_to "Выход",    destroy_user_session_path, :method => :delete %></li>
+              <li><%= link_to "Профиль",      edit_user_registration_path %></li>
+              <li><%= link_to "Выход",        destroy_user_session_path, :method => :delete %></li>
             <% else %>
               <li><%= link_to "Регистрация",  new_user_registration_path %></li>
             <% end %>

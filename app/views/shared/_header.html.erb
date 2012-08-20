@@ -10,21 +10,21 @@
 
       <div class="two columns">
         <div class="center-text <% if @nav == "blog" %>active<% end %>">
-          <a href="#" title="Материалы">Материалы</a>
+          <%= link_to "Материалы", blog_path %>
           <div class="pointer"></div>
         </div>
       </div>
 
       <div class="two columns">
-        <div class="center-text <% if @nav == "forum" %>active<% end %>">
-          <a href="#" title="Проекты">Обсуждения</a>
+        <div class="center-text <% if @nav == "discussions" %>active<% end %>">
+          <%= link_to "Обсуждения", discussions_path %>
           <div class="pointer"></div>
         </div>
       </div>
 
       <div class="two columns">
-        <div class="center-text <% if @nav == "friends" %>active<% end %>">
-          <a href="#" title="Наши друзья">Наша семья</a>
+        <div class="center-text <% if @nav == "family" %>active<% end %>">
+          <%= link_to "Наша семья", family_path %>
           <div class="pointer"></div>
         </div>
       </div>
