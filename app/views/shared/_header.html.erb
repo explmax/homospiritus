@@ -30,10 +30,17 @@
       </div>
 
       <div class="two columns end">
-        <div class="center-text <% if @nav == "registration" %>active<% end %>">
-          <a href="#" title="Регистрация">Регистрация</a>
-          <div class="pointer"></div>
-        </div>
+        <% if user_signed_in? %>
+          <div class="center-text <%= yield :profile_nav %>">
+            <%= link_to "Профиль", edit_user_registration_path %>
+            <div class="pointer"></div>
+          </div>
+        <% else %>
+          <div class="center-text <%= yield :registration_nav %>">
+            <%= link_to "Регистрация", new_user_registration_path %>
+            <div class="pointer"></div>
+          </div>
+        <% end %>
       </div>
 
   </div>

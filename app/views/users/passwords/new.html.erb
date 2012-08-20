@@ -1,0 +1,57 @@
+<% content_for :registration_nav do %>active<% end %>
+
+<div class="row">
+  <div class="eight mobile-four columns centered title">
+    <h3>Забыли пароль? <small>введите ваш адрес электронной почты</small></h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="eight mobile-four columns centered">    
+    <div class="row">
+      <div class="eight mobile-four columns">
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+          <% if not resource.errors.empty? %>
+          <!-- ERROR MESSAGES -->
+            <div class="row">
+              <div class="twelve columns">
+                <div class="alert-box secondary">
+                  <%= devise_error_messages! %>
+                  <a href="" class="close">&times;</a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+
+          <div class="row">
+            <div class="twelve columns">
+              <p>На ваш электронный адресс будет отправленно сообщение с ссылкой, по которой вы сможете поменять пароль.</p>
+            </div>
+          </div>
+
+          <!-- AUTH FIELDS -->
+          <div class="row">
+            <div class="four mobile-one columns">
+              <label class="right inline">Почта:</label>
+            </div>
+            <div class="eight mobile-three columns">
+              <%= f.email_field :email, :required => true %>
+            </div>
+          </div>
+
+          <!-- SUBMIT BUTTON -->
+          <div class="row">
+            <div class="eight columns offset-by-four">
+              <%= f.submit "Прислать инструкции", :class => "button" %>
+            </div>
+          </div>      
+      <% end %>
+      </div>
+
+      <div class="four mobile-four columns">
+        <%= render "users/shared/links" %>
+      </div>    
+    </div>
+  </div>
+</div>
+

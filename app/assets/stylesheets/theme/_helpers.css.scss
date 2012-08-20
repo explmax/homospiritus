@@ -2,3 +2,17 @@
 .center-text {
   text-align:center;
 }
+
+ul.none {
+  list-style:none;
+}
+
+.margin {
+  margin:0 0 12px 0;
+}
+
+// DEVISE STYLING
+#error_explanation {
+  h2 { font-size:1em; margin:0; }
+  ul { margin-bottom:0; }
+}

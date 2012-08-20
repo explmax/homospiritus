@@ -4,6 +4,9 @@ html {
 }
 
 #main {
+  min-height:24em;
+  margin-bottom:2em;
+
   ul.outside {
     list-style-position:outside;
     margin-left:24px;
@@ -12,9 +15,8 @@ html {
   a {
     text-decoration:underline;
   }
-
-  article {
-    margin-bottom:2em;
+  a.button {
+    text-decoration:none; 
   }
 }
 

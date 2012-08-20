@@ -82,7 +82,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "ce18a2d643172c88f2a88dd9de44a5edba9eb96a7e1436a8b1d1a718f20b661bebe5485d5fb7ee796cc928df638a3d6d9d1e54c602f76a04078bd6ab4a4f1309"
+  # config.pepper = "8a22aa249720600401b8b5ae7c46e28f6538d9509c243daf6eaaeee53c55b1516a9957008bb5d48fa6d354d6aa6bf88640275d05a89de13ce33ee472a6b4a5ae"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -178,11 +178,11 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
-  # config.default_scope = :user
+  config.default_scope = :user
 
   # Set this configuration to false if you want /users/sign_out to sign out
   # only the current scope. By default, Devise signs out all scopes.

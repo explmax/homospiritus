@@ -1,4 +1,6 @@
 Homospiritus::Application.routes.draw do
+  devise_for :users
+
   # Website
   root :to => 'flatpages#movement'
 
