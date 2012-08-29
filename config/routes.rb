@@ -14,7 +14,7 @@ Homospiritus::Application.routes.draw do
   mount_blog_at '/blog'
 
   # Admin
-  mount ActiveadminSettings::Engine => '/admin'
+  mount_activeadmin_settings
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
