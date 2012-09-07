@@ -8,7 +8,7 @@
           <% if @post.categories.size > 0 %>
             <ul class="none categories">
             <% @post.categories.each do |c| %>
-              <li><%= link_to c.name, blog_category_path(c), :class => "round label" %></li>
+              <li><%= link_to c.name, blog_category_path(c.slug), :class => "round label" %></li>
             <% end %>
             </ul>
           <% end %>

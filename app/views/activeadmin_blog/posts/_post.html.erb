@@ -5,7 +5,7 @@
       <% if post.categories.size > 0 %>
         <ul class="none">
         <% post.categories.each do |c| %>
-          <li><%= link_to c.name, blog_category_path(c), :class => "round label" %></li>
+          <li><%= link_to c.name, blog_category_path(c.slug), :class => "round label" %></li>
         <% end %>
         </ul>
       <% end %>
@@ -14,12 +14,12 @@
 
   <div class="ten mobile-three columns">
     <h3>
-      <a href="<%= blog_post_path(post) %>" title="Read this post"><%= post.title %></a>
+      <a href="<%= blog_post_path(post.slug) %>" title="Read this post"><%= post.title %></a>
     </h3>
 
     <% if post.has_featured_image? %>
       <p>
-        <a href="<%= blog_post_path(post) %>" title="Read More">
+        <a href="<%= blog_post_path(post.slug) %>" title="Read More">
           <%= image_tag post.featured_image_url, :alt=>post.title %>
         </a>
       </p>
@@ -27,6 +27,6 @@
 
     <p><%= post.excerpt %></p>
 
-    <%= link_to "Читать далее", blog_post_path(post) %>
+    <%= link_to "Читать далее", blog_post_path(post.slug) %>
   </div>
 </div>
