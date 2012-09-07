@@ -68,4 +68,5 @@ test:
         consistency: :strong
 production:
   sessions:
-    uri: <%= ENV["MONGO_URL"] %>
+    default:
+      uri: <%= ENV["MONGO_URL"] %>
