@@ -11,6 +11,14 @@ class FlatpagesController < ApplicationController
     @nav = "about"
   end
 
+  def who_we_are
+    @nav = "about"
+  end
+
+  def life_style
+    @nav = "about"
+  end
+
   def family
     @nav = "family"
   end

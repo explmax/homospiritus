@@ -7,8 +7,10 @@ Homospiritus::Application.routes.draw do
   get '/discussions', :to => 'discussions#index'
   get '/family',      :to => 'flatpages#family'
   
-  get '/people',    :to => 'flatpages#people'
-  get '/seminars',  :to => 'flatpages#seminars'
+  get '/people',      :to => 'flatpages#people'
+  get '/seminars',    :to => 'flatpages#seminars'
+  get '/who-we-are',  :to => 'flatpages#who_we_are', as: 'who_we_are'
+  get '/life-style',  :to => 'flatpages#life_style', as: 'life_style'
 
   # Blog
   mount_blog_at '/blog'
