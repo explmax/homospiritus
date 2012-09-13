@@ -28,14 +28,19 @@
     }
   }
 
-  .contacts {
+  .bottom {
     background:#1C1C1C;
     padding:.6em 0;
 
     .columns {
       line-height:24px;
     }
+  }
 
+  .contacts {
+    h6 {
+      margin-top:0;
+    }
     a {
       color:#fff;
       display:block;
@@ -44,6 +49,7 @@
 
       &.skype {
         background:image-url("skype.png") no-repeat left;
+        margin-bottom:0.5em;
       }
       &.email {
         background:image-url("email.png") no-repeat left;
