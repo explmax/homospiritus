@@ -1,7 +1,7 @@
 <div class="row">
   <div class="two mobile-one columns">
     <section class="meta">
-      <date><%= post.date %></date>
+      <p><i><date><span class='day'><%= post.date.day %></span><br/><span><%= post.date.strftime('%m / %Y') %></span></date></i></p>
       <% if post.categories.size > 0 %>
         <ul class="none">
         <% post.categories.each do |c| %>

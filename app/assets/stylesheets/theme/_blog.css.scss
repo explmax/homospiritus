@@ -14,6 +14,13 @@
   }
 }
 
+date {
+  .day {
+    font-size:2em;
+    font-weight:bold;
+  }  
+}
+
 // DESKTOP
 @media only screen and (min-width: 767px) {
   #blog {
