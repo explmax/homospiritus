@@ -3,7 +3,7 @@
 </form>
 
 <ul class="none">
-  <li class="active"><a href="<%= blog_path %>" title="Все статьи">Все статьи</a></li>
+  <li class="active"><a href="<%= blog_path %>" title="Все материалы">Все материалы</a></li>
   <% @categories.all.each do |c| %>
     <li><a href="<%= blog_category_path(c.slug) %>" title="<%= c.name %>"><%= c.name %></a></li>
   <% end %>
