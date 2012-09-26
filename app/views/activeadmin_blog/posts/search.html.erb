@@ -1,12 +1,15 @@
-<div class="row" id="blog">
-  <div class="nine mobile-four columns">  
-    <%= render :partial => "post", :collection => @posts %>
-    <%= paginate @posts %>
-  </div>
+<% content_for :header do %>
+  <h2>Поиск: <%= @search_query %></h2>
+  <h4 class="subheader">Блог в котором мы публикуем обучающие, интересные и веселые статьи</h4>
+<% end %>
 
-  <div class="three mobile-four columns">
-    <section class="sidebar">
-      <%= render :partial => "sidebar" %>
-    </section>
-  </div>
+<div class="content nine mobile-four columns">  
+  <% if @posts.size > 0 %>
+    <%= render :partial => "post", :collection => @posts %>
+  <% else %>
+    <p>Статей по вашему запросу не найдено.</p>
+  <% end %>
+  <%= paginate @posts %>
 </div>
+
+<%= render partial: 'sidebar', locals: { active: 0 } %>

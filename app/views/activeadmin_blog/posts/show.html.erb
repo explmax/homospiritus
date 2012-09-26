@@ -1,32 +1,11 @@
-<div class="row" id="blog">
-  <div class="nine mobile-four columns">  
-    <div class="row">
-      <div class="two mobile-one columns">
-        <section class="meta">
-          <date><%= @post.date %></date>
-          
-          <% if @post.categories.size > 0 %>
-            <ul class="none categories">
-            <% @post.categories.each do |c| %>
-              <li><%= link_to c.name, blog_category_path(c.slug), :class => "round label" %></li>
-            <% end %>
-            </ul>
-          <% end %>
+<% content_for :header do %>
+  <h2>Материалы</h2>
+  <h4 class="subheader">Блог в котором мы публикуем обучающие, интересные и веселые статьи</h4>
+<% end %>
 
-        </section>
-      </div>
-
-      <div class="ten mobile-three columns">
-        <h2><%= @post.title %></h2>
-
-        <p><%= @post.content.html_safe %></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="three mobile-four columns">
-    <section class="sidebar">
-      <%= render :partial => "sidebar" %>
-    </section>
-  </div>
+<div class="content nine mobile-four columns">
+  <h3><%= @post.title %></h3>
+  <p><%= @post.content.html_safe %></p>
 </div>
+
+<%= render partial: 'sidebar', locals: { active: 0 } %>

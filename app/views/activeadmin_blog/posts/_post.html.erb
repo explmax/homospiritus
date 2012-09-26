@@ -1,32 +1,15 @@
-<div class="row">
-  <div class="two mobile-one columns">
-    <section class="meta">
-      <p><i><date><span class='day'><%= post.date.day %></span><br/><span><%= post.date.strftime('%m / %Y') %></span></date></i></p>
-      <% if post.categories.size > 0 %>
-        <ul class="none">
-        <% post.categories.each do |c| %>
-          <li><%= link_to c.name, blog_category_path(c.slug), :class => "round label" %></li>
-        <% end %>
-        </ul>
-      <% end %>
-    </section>
-  </div>
+<article class='post'>
+  <h3><a href="<%= blog_post_path(post.slug) %>" title="Read this post"><%= post.title %></a></h3>
 
-  <div class="ten mobile-three columns">
-    <h2>
-      <a href="<%= blog_post_path(post.slug) %>" title="Read this post"><%= post.title %></a>
-    </h2>
+  <% if post.has_featured_image? %>
+    <p>
+      <a href="<%= blog_post_path(post.slug) %>" title="Read More">
+        <%= image_tag post.featured_image_url, :alt=>post.title %>
+      </a>
+    </p>
+  <% end %>
 
-    <% if post.has_featured_image? %>
-      <p>
-        <a href="<%= blog_post_path(post.slug) %>" title="Read More">
-          <%= image_tag post.featured_image_url, :alt=>post.title %>
-        </a>
-      </p>
-    <% end %>
+  <p><%= post.excerpt %></p>
 
-    <p><%= post.excerpt %></p>
-
-    <%= link_to "Читать далее", blog_post_path(post.slug) %>
-  </div>
-</div>
+  <%= link_to "Читать полностью", blog_post_path(post.slug) %>
+</article>
