@@ -8,8 +8,10 @@ ActiveadminBlog::PostsController.class_eval do
   end
 
   def category
-    category_slug = params[:slug]
-    @category = ActiveadminBlog::BlogCategory.where(slug: category_slug).first()
+    category_slug   = params[:slug]
+    @category       = ActiveadminBlog::BlogCategory.where(slug: category_slug).first()
+    @category_index = @blog_categories.to_a.index{ |c| c.slug == @category.slug } 
+    
     @posts = ActiveadminBlog::BlogPost.published_in_category(category_slug)
     @posts = @posts.page params[:page]
   end

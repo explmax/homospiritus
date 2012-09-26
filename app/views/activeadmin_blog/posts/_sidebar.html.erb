@@ -4,11 +4,16 @@
   </form>
 
   <ul class="side-nav">
+    <li><h6>Наш блог</h6></li>
+    <li class="divider"></li>
     <li <% if active == 1 %>class='active'<% end %>><%= link_to 'Все статьи', blog_path %></li>
+  </ul>
+
+  <ul class="side-nav">
     <li><h6>Категории</h6></li>
     <li class="divider"></li>
-    <% @categories.all.each do |c| %>
-      <li><%= link_to c.name, blog_category_path(c.slug) %></li>
+    <% @categories.all.each_with_index do |c, index| %>
+      <li <% if @category_index == index %>class='active'<% end %>><%= link_to c.name, blog_category_path(c.slug) %></li>
     <% end %>
   </ul>
 </div>
