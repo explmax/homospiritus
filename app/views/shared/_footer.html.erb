@@ -1,69 +1,11 @@
-<footer id="footer">
-  <section class="links">
-    <div class="row">
-      <div class="four mobile-four columns">
-        <h5 class="header"><%= link_to "Движение «За Творца»", "/" %></h5>
-      </div>
-    </div>
-    <div class="row">
+<footer class='row'>
+  <div class='twelve columns'>
+    <div class='copyright'>© 2012 Движение «За Творца»</div>
+  </div>
+</footer>
 
-      <div class="four mobile-four columns">
-        <div class="row">
-          <div class="six mobile-two columns">
-            <ul>
-              <li><%= link_to "О движении",         "/" %></li>
-              <li><%= link_to "Кто мы и зачем мы",  who_we_are_path %></li>
-              <li><%= link_to "Круг веры",          people_path %></li>
-            </ul>
-          </div>
-          <div class="six mobile-two columns">
-            <ul>
-              <li><%= link_to "Наши семинары",      seminars_path %></li>
-              <li><%= link_to "Стиль жизни",        life_style_path %></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="four columns">
-        <div class="row">
-          <div class="six mobile-two columns">
-            <ul>
-              <li><%= link_to "Материалы",    blog_path %></li>
-              <li><%= link_to "Обсуждения",   discussions_path %></li>
-              <li><%= link_to "Наши друзья",  family_path %></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="four columns">
-        <div class="row">
-          <div class="six mobile-two columns">
-            <ul>
-            <% if user_signed_in? %>
-              <li><%= link_to "Профиль",      edit_user_registration_path %></li>
-              <li><%= link_to "Выход",        destroy_user_session_path, :method => :delete %></li>
-            <% else %>
-              <li><%= link_to "Регистрация",  new_user_registration_path %></li>
-            <% end %>
-            </ul>
-          </div>
-          <div class="six mobile-two columns">
-            <ul class='contacts'>
+<!--
               <li><h6>Наши контакты</h6></li>
               <li><a class="skype" href="skype:<%= settings_value 'Skype' %>?call"><%= settings_value 'Skype' %></a></li>
               <li><a class="email" href="mailto:<%= settings_value 'Email' %>"><%= settings_value 'Email' %></a></li>
-            </ul>
-          </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class='bottom'>
-    <div class="row">
-      <div class="four columns">© 2012 Движение «За Творца»</div>
-    </div>
-  </section>
-</footer>
+-->

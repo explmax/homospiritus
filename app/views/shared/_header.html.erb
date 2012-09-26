@@ -1,47 +1,103 @@
-<header id="header">
-  <div class="row menu">
+    <nav class="top-bar">
+        <ul>
+          <li class="name"><h1><%= link_to 'Homo Spiritus', '/' %></h1></li>
+          <li class="toggle-topbar"><a href="#"></a></li>
+        </ul>
+        <section>
+          <ul class="left">
+            <li class="divider show-for-medium-and-up"></li>
+            
+            <li class="has-dropdown">
+              <a href="#">О движении</a>
 
-      <div class="two columns offset-by-one">
-        <div class="center-text <% if @nav == "about" %>active<% end %>">
-          <a href="/" title="Движение «За Творца»">О движении</a>
-          <div class="pointer"></div>
+              <ul class="dropdown">
+                <li><%= link_to 'Движение «За Творца»', '/' %></li>
+                <li><%= link_to 'Кто мы и зачем мы',    kto_my_path %></li>
+                <li><%= link_to 'Круг веры',            krug_very_path %></li>
+                <li><%= link_to 'Стиль жизни',          stil_zhizni_path %></li>
+              </ul>
+
+            </li>
+            
+            <li class="divider show-for-medium-and-up"></li>
+            
+            <li class="has-dropdown">
+              <a href="#">Деятельность</a>
+
+              <ul class="dropdown">
+                <li><%= link_to 'Наши семинары', nashy_seminary_path %></li>
+                <li><%= link_to 'Структуры медиатор-групп', struktury_mediator_grup_path %></li>
+                <!--
+                <li><a href="#">Расписание</a></li>
+                <li><a href="#">Принципы проведения</a></li>
+                -->
+              </ul>
+
+            </li>
+            
+            <li class="divider show-for-medium-and-up"></li>
+            
+            <li class="has-dropdown">
+              <a href="#">Материалы</a>
+
+              <ul class="dropdown">
+                <li><label>Наш блог</label></li>
+                <li><%= link_to 'Все статьи', blog_path %></li>
+                <li class="divider"></li>
+                <li><label>Категории</label></li>
+                <% @blog_categories.all.each do |c| %>
+                  <li><%= link_to c.name, blog_category_path(c.slug) %>
+                <% end %>
+              </ul>
+
+            </li>
+            <li class="divider show-for-medium-and-up"></li>
+            <!--
+            <li><a href="#">Обсуждения</a></li>
+            <li class="divider show-for-medium-and-up"></li> -->
+            <li class="has-dropdown">
+              <a href="#">Сотрудничество</a>
+
+              <ul class="dropdown">
+                <li><%= link_to 'Сотрудничество', sotrudnichestvo_path %></li>
+                <% if user_signed_in? %>
+                  <li class="divider"></li>
+                  <li><label>Предложения</label></li>
+                  <li><%= link_to 'Для фирм', predlozheniya_dlya_firm_path %></li>
+                  <li><%= link_to 'Для ведущих семинаров', predlozheniya_dlya_vedushih_seminarov_path %></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+          <ul class='right'>
+            <% if user_signed_in? %>
+              <li><%= link_to "Профиль", edit_user_registration_path %></li>
+              <li class='button-link'>
+                <%= link_to "Выход", destroy_user_session_path, :method => :delete, class: 'small button' %>
+              </li>
+            <% else %>
+              <li class='button-link'>
+                <%= link_to "Регистрация", new_user_registration_path, class: 'small button' %>
+              </li>
+            <% end %>
+          </ul>
+        </section>
+    </nav>
+
+  <% if content_for?(:header) %>
+    <header>
+      <div class='row'>
+        <div class='twelve columns'>
+          <%= yield(:header) %>
         </div>
       </div>
+    </header>    
+  <% end %>
 
-      <div class="two columns">
-        <div class="center-text <% if @nav == "blog" %>active<% end %>">
-          <%= link_to "Материалы", blog_path %>
-          <div class="pointer"></div>
-        </div>
-      </div>
 
-      <div class="two columns">
-        <div class="center-text <% if @nav == "discussions" %>active<% end %>">
-          <%= link_to "Обсуждения", discussions_path %>
-          <div class="pointer"></div>
-        </div>
-      </div>
 
-      <div class="two columns">
-        <div class="center-text <% if @nav == "family" %>active<% end %>">
-          <%= link_to "Наша семья", family_path %>
-          <div class="pointer"></div>
-        </div>
-      </div>
 
-      <div class="two columns end">
-        <% if user_signed_in? %>
-          <div class="center-text <%= yield :profile_nav %>">
-            <%= link_to "Профиль", edit_user_registration_path %>
-            <div class="pointer"></div>
-          </div>
-        <% else %>
-          <div class="center-text <%= yield :registration_nav %>">
-            <%= link_to "Регистрация", new_user_registration_path %>
-            <div class="pointer"></div>
-          </div>
-        <% end %>
-      </div>
 
-  </div>
-</header>
+
+
+
