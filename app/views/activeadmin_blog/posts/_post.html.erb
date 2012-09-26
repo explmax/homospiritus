@@ -9,7 +9,7 @@
     </p>
   <% end %>
 
-  <p><%= post.excerpt %></p>
+  <%= post.excerpt.html_safe %>
 
   <%= link_to "Читать полностью", blog_post_path(post.slug) %>
 </article>
