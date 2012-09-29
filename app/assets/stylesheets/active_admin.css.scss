@@ -6,3 +6,28 @@
 
 // To customize the Active Admin interfaces, add your
 // styles here:
+
+#footer p { display:none; }
+
+#posts.index_table tr th:last-child { width:inherit; }
+#posts.index_table tr th:first-child {
+  width: 60px;
+}
+
+.post-details {
+  .title {
+    font-size:1.4em;
+  } 
+  .buttons {
+    float:right;
+  }
+}
+
+table.index_table td.post-status {
+  padding-top:2.5em;
+  text-align:center;
+  date {
+    .day { font-size:2em; line-height: 1.5em; }
+    span { display:block; }
+  }
+}

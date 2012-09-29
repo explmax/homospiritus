@@ -1,0 +1,42 @@
+<table border="0" cellspacing="0" cellpadding="0" id="posts" class="index_table">
+  <thead>
+    <tr>
+      <th class=""></th>
+      <th class="">Статья</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% posts.each do |p| %>
+      <tr>
+        <td class="post-status">
+          <% if p.published %>
+            <% unless p.date.nil? %>
+              <date>
+                <span class='day'><%= p.date.day %></span>
+                <span class='month-n-year'><%= p.date.strftime('%m / %Y') %></span>
+              </date>
+            <% end %>
+          <% else %>
+            <i>Draft</i>
+          <% end %>
+        </td>
+
+        <td class="post-details">
+          <strong class='title'><%= p.title %></strong>
+          <span class='buttons'>
+            <%= link_to("Preview",  blog_post_path(p.slug), class: 'member_link', target: '_blank') %>
+            <%= link_to("Edit",     edit_admin_post_path(p), :class => "member_link") %>
+            <%= link_to("Delete",   admin_post_path(p),      :class => "member_link", :method => :delete, :confirm => "Are you sure?") %>
+          </span>
+          <div style="margin-top:0.4em;">
+            <%= p.excerpt.html_safe %>
+                    
+            <% if p.categories.size > 0 %>
+              Категории: <%= p.categories.collect{ |c| link_to(c.name, admin_category_path(c)) }.join(", ").html_safe %>
+            <% end %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

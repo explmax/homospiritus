@@ -20,7 +20,7 @@ ActiveAdmin.register ActiveadminBlog::BlogPost, :as => "Post" do
 
   collection_action :all do
     @page_title = "All Posts"
-    @posts      = ActiveadminBlog::BlogPost.all
+    @posts      = ActiveadminBlog::BlogPost.all.without_images
     @categories = ActiveadminBlog::BlogCategory.all
   end
 end
