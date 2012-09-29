@@ -29,6 +29,7 @@ gem "activeadmin-blog"
 gem "aws-s3"
 gem "fog"
 gem "mini_magick"
+gem "rmagick"
 gem "asset_sync"
 
 group :production do

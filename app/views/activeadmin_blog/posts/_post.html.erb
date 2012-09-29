@@ -1,9 +1,13 @@
 <article class='post'>
-  <h3><a href="<%= blog_post_path(post.slug) %>" title="Read this post"><%= post.title %></a></h3>
+  <h3>
+    <a href="<%= blog_post_path(post.slug) %>" title="Читать статью полностью">
+      <%= post.title %>
+    </a>
+  </h3>
 
   <% if post.has_featured_image? %>
     <p>
-      <a href="<%= blog_post_path(post.slug) %>" title="Read More">
+      <a href="<%= blog_post_path(post.slug) %>" title="Читать статью полностью">
         <%= image_tag post.featured_image_url, :alt=>post.title %>
       </a>
     </p>

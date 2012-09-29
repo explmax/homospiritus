@@ -1,0 +1,9 @@
+<% post = image %>
+
+<div class='image-post four mobile-two columns' style='margin-bottom:2em;'>
+  <a href='<%= blog_post_path(post.slug) %>' title='<%= post.title %>' class='th' style='color:#fff;'>
+    <%= image_tag post.featured_image.preview, alt:post.title %>
+
+    <div style='position:absolute; bottom:0; margin:4px; padding:4px; background:rgba(0,0,0,0.4); margin-right:19px;'><%= post.title %></div>
+  </a>
+</div>

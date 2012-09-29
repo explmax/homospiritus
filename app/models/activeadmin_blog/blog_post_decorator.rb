@@ -10,4 +10,6 @@ ActiveadminBlog::BlogPost.class_eval do
       ""
     end
   end
+
+  scope :without_images, where(:tags.ne => 'image')
 end

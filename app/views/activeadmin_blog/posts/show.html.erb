@@ -5,6 +5,11 @@
 
 <div class="content nine mobile-four columns">
   <h3><%= @post.title %></h3>
+
+  <% if @post.tags == 'image' %>
+    <%= image_tag @post.featured_image.full, alt: @post.title %>
+  <% end %>
+
   <p><%= @post.content.html_safe %></p>
 </div>
 
