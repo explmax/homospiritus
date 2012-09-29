@@ -10,10 +10,10 @@ CarrierWave.configure do |config|
 
   case Rails.env.to_sym
     when :development
-      #config.storage = :file
-      config.fog_directory  = ENV["FOG_MEDIA_DIRECTORY"]
-      config.fog_host       = "//#{ ENV["FOG_MEDIA_DIRECTORY"] }.s3.amazonaws.com"
-      config.fog_attributes = {"Cache-Control"=>"max-age=315576000"}  # optional, defaults to {}
+      config.storage = :file
+      #config.fog_directory  = ENV["FOG_MEDIA_DIRECTORY"]
+      #config.fog_host       = "//#{ ENV["FOG_MEDIA_DIRECTORY"] }.s3.amazonaws.com"
+      #config.fog_attributes = {"Cache-Control"=>"max-age=315576000"}  # optional, defaults to {}
     when :production
       config.fog_directory  = ENV["FOG_MEDIA_DIRECTORY"]
       config.fog_host       = "//#{ ENV["FOG_MEDIA_DIRECTORY"] }.s3.amazonaws.com"

@@ -8,18 +8,28 @@
   <tbody>
     <% posts.each do |p| %>
       <tr>
-        <td class="post-status">
-          <% if p.published %>
-            <% unless p.date.nil? %>
-              <date>
-                <span class='day'><%= p.date.day %></span>
-                <span class='month-n-year'><%= p.date.strftime('%m / %Y') %></span>
-              </date>
+        <% if p.tags == 'image' %>
+          <td class="featured-image">
+            <% if p.featured_image.thumb.url.nil? %>
+              <%= image_tag("http://placehold.it/118x100&text=NO+IMAGE", :alt=>p.title, :size=>"118x100") %>
+            <% else %>
+              <%= image_tag(p.featured_image.thumb.url, :alt=>p.title, :size=>"118x100") %>
             <% end %>
-          <% else %>
-            <i>Draft</i>
-          <% end %>
-        </td>
+          </td>
+        <% else %>
+          <td class="post-status">
+            <% if p.published %>
+              <% unless p.date.nil? %>
+                <date>
+                  <span class='day'><%= p.date.day %></span>
+                  <span class='month-n-year'><%= p.date.strftime('%m / %Y') %></span>
+                </date>
+              <% end %>
+            <% else %>
+              <i>Draft</i>
+            <% end %>
+          </td>
+        <% end %>
 
         <td class="post-details">
           <strong class='title'><%= p.title %></strong>
