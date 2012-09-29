@@ -12,4 +12,6 @@ ActiveadminBlog::BlogPost.class_eval do
   end
 
   scope :without_images, where(:tags.ne => 'image')
+
+  paginates_per 100
 end
