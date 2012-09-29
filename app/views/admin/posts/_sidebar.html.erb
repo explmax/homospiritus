@@ -1,0 +1,21 @@
+<h3>Категории</h3>
+<div class="panel_contents">
+  <p><%= link_to "Все статьи", all_admin_posts_path %></p>
+
+  <ul id="blog_categories_list">
+    <% categories.each do |c| %>
+      <li id="category_<%= c.id %>">
+        <span>
+          <%= link_to c.name, admin_category_path(c) %>
+          <% if c.blog_posts.size > 0 %>(<%= c.blog_posts.size %>)<% end %>
+        </span>
+        <span class="action-buttons">
+          <%= link_to "Edit", edit_admin_category_path(c) %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+  <br/>
+
+  <%= link_to "Добавить категорию", new_admin_category_path %>
+</div>

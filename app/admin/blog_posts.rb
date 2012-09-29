@@ -1,5 +1,7 @@
+# encoding: utf-8
+
 ActiveAdmin.register ActiveadminBlog::BlogPost, :as => "Post" do
-  menu :label => "Blog"
+  menu label: 'Материалы'
 
   actions :all, :except => [:show]
 
@@ -19,7 +21,7 @@ ActiveAdmin.register ActiveadminBlog::BlogPost, :as => "Post" do
   end
 
   collection_action :all do
-    @page_title = "All Posts"
+    @page_title = "Все статьи"
     @posts      = ActiveadminBlog::BlogPost.all.without_images
     @categories = ActiveadminBlog::BlogCategory.all
   end
