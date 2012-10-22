@@ -1,5 +1,5 @@
 ActiveadminBlog::PostsController.class_eval do
-  before_filter :authenticate_user!, only: [:show]
+  #before_filter :authenticate_user!, only: [:show]
 
   def index
     @posts = ActiveadminBlog::BlogPost.published
