@@ -1,0 +1,39 @@
+<!-- Фонды помощи больным детям -->
+<% content_for :description do %>
+Список фондов помощи больным детям
+<% end %>
+
+<% content_for :keywords do %>
+ребенок фонд помощь болезнь деньги люди лечение операция дети
+<% end %>
+
+<% content_for :header do %>
+  <h2>Фонды помощи больным детям</h2>
+  <!--<h4 class="subheader">Что происходит на наших семинарах курса «Вы – Творцы» и чем они отличаются от всех других.</h4>-->
+<% end %>
+
+<article class='twelve columns'>
+  <section class='row'>
+    <div class='content nine columns'>
+      <ul>
+        <li><%= link_to "Русфонд", "http://www.rusfond.ru/", target: "_blank" %></li>
+        <li><%= link_to "Гольфстрим", "http://www.golfstreamfond.ru/", target: "_blank" %></li>
+        <li><%= link_to "Радуга", "http://raduga-charity.ru/", target: "_blank" %></li>
+        <li><%= link_to "Информационный сайт помощи детям", "http://edinomblshlenniki.com/", target: "_blank" %></li>
+        <li><%= link_to "Подари жизнь", "http://www.podari-zhizn.ru/", target: "_blank" %>
+        <li><%= link_to "«Джаз и классика»", "http://fond.jazzandclassic.ru/", target: "_blank" %></li>
+        <li><%= link_to "Worldvita", "http://worldvita.ru/", target: "_blank" %></li>
+        <li><%= link_to "Здоровье детям", "http://www.donare-mvdprof.ru/", target: "_blank" %></li>
+        <li><%= link_to "Милосердие", "http://www.bf-m.ru/", target: "_blank" %></li>
+        <li><%= link_to "Адреса милосердия", "http://admil.ru/", target: "_blank" %></li>
+        <li><%= link_to "Анита", "http://www.fondanita.ru/", target: "_blank" %></li>
+        <li><%= link_to "Остров надежды", "http://www.hope-island.ru/", target: "_blank" %></li>
+        <li><%= link_to "Доброе сердце", "http://dobroe-serdce.ru/", target: "_blank" %></li>
+        <li><%= link_to "Росспас", "http://www.rosspas.ru/", target: "_blank" %></li>
+        <li><%= link_to "Алёша", "http://www.aleshafond.ru/", target: "_blank" %></li>
+        <li><%= link_to "Помоги.орг", "http://www.pomogi.org/", target: "_blank" %></li>
+      </ul>
+    </div>
+    <%= render partial: 'shared/sidebar', locals: { active: 9 } %>
+  </section>
+</article>

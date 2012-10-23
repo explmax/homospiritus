@@ -21,6 +21,7 @@ Homospiritus::Application.routes.draw do
 
   # Cooperation
   get '/sotrudnichestvo',                       :to => 'cooperation#sotrudnichestvo',         as: 'sotrudnichestvo'
+  get '/fondi',                                 :to => 'cooperation#fondi',                   as: 'fondi'
   get '/predlozheniya-dlya-firm',               :to => 'cooperation#dlya_firm',               as: 'predlozheniya_dlya_firm'
   get '/predlozheniya-dlya-vedushih-seminarov', :to => 'cooperation#dlya_vedushih_seminarov', as: 'predlozheniya_dlya_vedushih_seminarov'
 
