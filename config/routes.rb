@@ -16,6 +16,7 @@ Homospiritus::Application.routes.draw do
   # Activity
   get '/nashy-seminary',          :to => 'activity#nashy_seminary',           as: 'nashy_seminary'
   get '/struktury-mediator-grup', :to => 'activity#struktury_mediator_grup',  as: 'struktury_mediator_grup'
+  get '/online',                  :to => 'activity#online',                   as: 'online'
 
   
 
