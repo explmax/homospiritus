@@ -23,9 +23,10 @@
     <li><h6>Сотрудничество</h6></li>
     <li class="divider"></li>
     <li <% if active == 9 %>class='active'<% end %>><%= link_to 'Для всех', sotrudnichestvo_path %></li>
+    <li <% if active == 10 %>class='active'<% end %>><%= link_to 'Фонды помощи', fondi_path %></li>
     <% if user_signed_in? %>
-      <li <% if active == 10 %>class='active'<% end %>><%= link_to 'Для фирм', predlozheniya_dlya_firm_path %></li>
-      <li <% if active == 11 %>class='active'<% end %>><%= link_to 'Для ведущих семинаров', predlozheniya_dlya_vedushih_seminarov_path %></li>
+      <li <% if active == 11 %>class='active'<% end %>><%= link_to 'Для фирм', predlozheniya_dlya_firm_path %></li>
+      <li <% if active == 12 %>class='active'<% end %>><%= link_to 'Для ведущих семинаров', predlozheniya_dlya_vedushih_seminarov_path %></li>
     <% end %>
   </ul>
 </div>
