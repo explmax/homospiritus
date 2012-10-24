@@ -35,6 +35,11 @@ Homospiritus::Application.routes.draw do
   # Blog
   mount_blog_at '/blog'
 
+  get '/utro',              :to => 'articles#utro',               as: 'utro'
+  get '/reshenie_problemi', :to => 'articles#reshenie_problemi',  as: 'reshenie_problemi'
+  get '/usilenie',          :to => 'articles#usilenie',           as: 'usilenie'
+  get '/na_noch',           :to => 'articles#na_noch',            as: 'na_noch'
+
 
 
   # Admin

@@ -52,6 +52,24 @@
                 <% @blog_categories.all.each do |c| %>
                   <li><%= link_to c.name, blog_category_path(c.slug) %>
                 <% end %>
+                <li class="divider"></li>
+                <li><label>Волшебные слова и инструкции</label></li>
+                <li><%= link_to 'Утром', utro_path %></li>
+                <li>
+                  <a title='Когда ПЛОХО или необходимо РЕШИТЬ ПРОБЛЕМУ'
+                     href='<%= reshenie_problemi_path%>'
+                     style='line-height:1.2;'>
+                    Когда ПЛОХО или<br/>необходимо РЕШИТЬ ПРОБЛЕМУ
+                  </a>
+                </li>
+                <li>
+                  <a title='Усиление себя энергией рода и космической семьи'
+                     href='<%= usilenie_path %>'
+                     style='line-height:1.2;'>
+                    Усиление себя энергией рода и<br/>космической семьи
+                  </a>
+                </li>
+                <li><%= link_to 'На ночь', na_noch_path %></li>
               </ul>
 
             </li>

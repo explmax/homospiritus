@@ -1,6 +1,6 @@
 <div class='sidebar three mobile-four columns'>
   <form class="well form-search" action="<%= blog_search_path %>" method="GET">
-    <input name="q" type="text" placeholder="Поиск">
+    <input name="q" type="text" placeholder="Поиск в материалах">
   </form>
 
   <ul class="side-nav">
@@ -15,6 +15,15 @@
     <% @categories.all.each_with_index do |c, index| %>
       <li <% if @category_index == index %>class='active'<% end %>><%= link_to c.name, blog_category_path(c.slug) %></li>
     <% end %>
+  </ul>
+
+  <ul class="side-nav">
+    <li><h6>Волшебные слова и инструкции</h6></li>
+    <li class="divider"></li>
+    <li <% if active == 1 %>class='active'<% end %>><%= link_to 'Утром', utro_path %></li>
+    <li <% if active == 2 %>class='active'<% end %>><%= link_to 'Когда ПЛОХО или необходимо РЕШИТЬ ПРОБЛЕМУ', reshenie_problemi_path %></li>
+    <li <% if active == 3 %>class='active'<% end %>><%= link_to 'Усиление себя энергией рода и космической семьи', usilenie_path %></li>
+    <li <% if active == 4 %>class='active'<% end %>><%= link_to 'На ночь', na_noch_path %></li>
   </ul>
 </div>
 
