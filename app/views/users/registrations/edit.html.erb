@@ -1,137 +1,140 @@
 <% content_for :profile_nav do %>active<% end %>
 
-<div class="row">
-  <div class="content eight mobile-four columns centered title">
-    <h3>Профиль <small class="hide-for-mobile">ваши настройки и личные данные</small></h3>
-  </div>
-</div>
+<div class='twelve columns'>
 
-<div class="row">
-  <div class="content eight mobile-four columns centered">    
-    <div class="row">
-      <div class="eight mobile-four columns">
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-          <% if not resource.errors.empty? %>
-          <!-- ERROR MESSAGES -->
-            <div class="row">
-              <div class="twelve columns">
-                <div class="alert-box secondary">
-                  <%= devise_error_messages! %>
-                  <a href="" class="close">&times;</a>
-                </div>
-              </div>
-            </div>
-          <% end %>
-
-          <!-- AUTH FIELDS -->
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Почта:</label>
-            </div>
-            <div class="eight mobile-three columns">
-              <%= f.email_field :email, :placeholder => "ваша@почта.com" %>
-            </div>
-          </div>
-
-          <!-- СHANGE PASSWORD -->
-          <div class="row">
-            <div class="eight columns offset-by-four">
-              <p><em>Если вы не хотите менять пароль, оставьте эти два поля пустыми.</em></p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Пароль:</label>
-            </div>
-            <div class="eight mobile-three columns">
-              <%= f.password_field :password %>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Еще раз:</label>
-            </div>
-            <div class="eight mobile-three columns">
-              <%= f.password_field :password_confirmation %>
-            </div>
-          </div>
-
-          <!-- PERSONAL FIELDS -->
-          <div class="content row">
-            <div class="twelve columns">
-              <h5>Личные данные</h5>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Имя:</label>
-            </div>
-            <div class="eight mobile-three columns">
-              <%= f.text_field :name, :placeholder => "имя и фамилия" %>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Город:</label>
-            </div>
-            <div class="eight mobile-three columns">
-              <%= f.text_field :city, :placeholder => "название" %>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Занятие:</label>
-            </div>
-            <div class="eight mobile-three columns">
-              <%= f.text_field :occupation, :placeholder => "" %>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Телефон:</label>
-            </div>
-            <div class="eight mobile-three columns">
-              <%= f.text_field :phone, :placeholder => "+380 50 8114121" %>
-            </div>
-          </div>
-
-          <!-- SUBMIT BUTTON -->
-          <div class="content row">
-            <div class="twelve columns">
-              <h5>Текущий пароль</h5>
-              <p><em>Пожалуйста введите ваш текущий пароль, чтобы сохранить изменения.</em></p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Пароль:</label>
-            </div>
-            <div class="eight mobile-three columns">
-              <%= f.password_field :current_password, :required => true %>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="eight columns offset-by-four">
-              <%= f.submit "Сохранить изменения", :class => "button" %>
-            </div>
-          </div>      
-      <% end %>
-      </div>
-
-      <div class="four mobile-four columns">
-        <hr class="show-for-small" />
-        <p>Ваши личные данные остаются полностью конфиденциальны. Мы не рассылаем спам.</p>
-        <p><%= link_to "Удалить мой профиль", registration_path(resource_name), :data => { :confirm => "Вы уверенны что хотите удалить свой профиль?" }, :method => :delete, :class => "button alert small" %></p>
-      </div>    
+  <div class="row">
+    <div class="content eight mobile-four columns centered title">
+      <h3>Профиль <small class="hide-for-mobile">ваши настройки и личные данные</small></h3>
     </div>
   </div>
-</div>
 
+  <div class="row">
+    <div class="content eight mobile-four columns centered">    
+      <div class="row">
+        <div class="eight mobile-four columns">
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+            <% if not resource.errors.empty? %>
+            <!-- ERROR MESSAGES -->
+              <div class="row">
+                <div class="twelve columns">
+                  <div class="alert-box secondary">
+                    <%= devise_error_messages! %>
+                    <a href="" class="close">&times;</a>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+
+            <!-- AUTH FIELDS -->
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Почта:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.email_field :email, :placeholder => "ваша@почта.com" %>
+              </div>
+            </div>
+
+            <!-- СHANGE PASSWORD -->
+            <div class="row">
+              <div class="eight columns offset-by-four">
+                <p><em>Если вы не хотите менять пароль, оставьте эти два поля пустыми.</em></p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Пароль:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.password_field :password %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Еще раз:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.password_field :password_confirmation %>
+              </div>
+            </div>
+
+            <!-- PERSONAL FIELDS -->
+            <div class="content row">
+              <div class="twelve columns">
+                <h5>Личные данные</h5>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Имя:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.text_field :name, :placeholder => "имя и фамилия" %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Город:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.text_field :city, :placeholder => "название" %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Занятие:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.text_field :occupation, :placeholder => "" %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Телефон:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.text_field :phone, :placeholder => "+380 50 8114121" %>
+              </div>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <div class="content row">
+              <div class="twelve columns">
+                <h5>Текущий пароль</h5>
+                <p><em>Пожалуйста введите ваш текущий пароль, чтобы сохранить изменения.</em></p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Пароль:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.password_field :current_password, :required => true %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="eight columns offset-by-four">
+                <%= f.submit "Сохранить изменения", :class => "button" %>
+              </div>
+            </div>      
+        <% end %>
+        </div>
+
+        <div class="four mobile-four columns">
+          <hr class="show-for-small" />
+          <p>Ваши личные данные остаются полностью конфиденциальны. Мы не рассылаем спам.</p>
+          <p><%= link_to "Удалить мой профиль", registration_path(resource_name), :data => { :confirm => "Вы уверенны что хотите удалить свой профиль?" }, :method => :delete, :class => "button alert small" %></p>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+</div>

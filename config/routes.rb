@@ -17,6 +17,8 @@ Homospiritus::Application.routes.draw do
   get '/nashy-seminary',          :to => 'activity#nashy_seminary',           as: 'nashy_seminary'
   get '/struktury-mediator-grup', :to => 'activity#struktury_mediator_grup',  as: 'struktury_mediator_grup'
   get '/online',                  :to => 'activity#online',                   as: 'online'
+  get '/utrennie-meditacyi',      :to => 'activity#utrennie_meditacyi',       as: 'utrennie_meditacyi'
+  get '/shkola-vedushih',         :to => 'activity#shkola_vedushih',          as: 'shkola_vedushih'
 
   
 
@@ -25,7 +27,6 @@ Homospiritus::Application.routes.draw do
   get '/fondi',                                 :to => 'cooperation#fondi',                   as: 'fondi'
   get '/predlozheniya-dlya-firm',               :to => 'cooperation#dlya_firm',               as: 'predlozheniya_dlya_firm'
   get '/predlozheniya-dlya-vedushih-seminarov', :to => 'cooperation#dlya_vedushih_seminarov', as: 'predlozheniya_dlya_vedushih_seminarov'
-
 
 
   get '/discussions', :to => 'discussions#index'

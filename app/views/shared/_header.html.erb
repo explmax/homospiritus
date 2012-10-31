@@ -1,7 +1,8 @@
     <nav class="top-bar">
         <ul>
           <li class="name">
-            <h1><%= link_to 'Homo Spiritus', '/' %></h1>
+            <%= image_tag 'homospiritus-logo-small.png', alt: 'Homo Spiritus', style: 'padding:0 10px;' %>
+            <!-- <h1><%= link_to 'Homo Spiritus', '/' %></h1> -->
           </li>
           <li class="toggle-topbar"><a href="#"></a></li>
         </ul>
@@ -13,6 +14,7 @@
               <a href="#">О движении</a>
 
               <ul class="dropdown">
+                <li><label>О нас</label></li>
                 <li><%= link_to 'Движение «За Творца»', '/' %></li>
                 <li><%= link_to 'Кто мы и зачем мы',    kto_my_path %></li>
                 <li><%= link_to 'Круг веры',            krug_very_path %></li>
@@ -27,14 +29,14 @@
               <a href="#">Деятельность</a>
 
               <ul class="dropdown">
+                <li><label>Информация</label></li>
                 <li><%= link_to 'Наши семинары', nashy_seminary_path %></li>
                 <li><%= link_to 'Структуры медиатор-групп', struktury_mediator_grup_path %></li>
                 <li class="divider"></li>
+                <li><label>Мероприятия</label></li>
                 <li><%= link_to 'Видео семинары он-лайн', online_path %></li>
-                <!--
-                <li><a href="#">Расписание</a></li>
-                <li><a href="#">Принципы проведения</a></li>
-                -->
+                <li><%= link_to 'Ежедневные утренние медитации', utrennie_meditacyi_path %></li>
+                <li><%= link_to 'Школа для ведущих', shkola_vedushih_path %></li>
               </ul>
 
             </li>
@@ -74,9 +76,6 @@
 
             </li>
             <li class="divider show-for-medium-and-up"></li>
-            <!--
-            <li><a href="#">Обсуждения</a></li>
-            <li class="divider show-for-medium-and-up"></li> -->
             <li class="has-dropdown">
               <a href="#">Сотрудничество</a>
 

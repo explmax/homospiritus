@@ -1,111 +1,121 @@
 <% content_for :registration_nav do %>active<% end %>
 
-<div class="row">
-  <div class="content eight mobile-four columns centered title">
-    <h3>Регистрация <small class="hide-for-mobile">пожалуйста, заполните все поля</small></h3>
-  </div>
-</div>
 
-<div class='row'>
-  <div class='content eight mobile-four columns centered'>
-    <div class="row">
-      <div class="eight mobile-four columns">
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-          <% if not resource.errors.empty? %>
-          <!-- ERROR MESSAGES -->
-            <div class="row">
-              <div class="twelve columns">
-                <div class="alert-box secondary">
-                  <%= devise_error_messages! %>
-                  <a href="" class="close">&times;</a>
+<% content_for :title do %>Регистрация - <% end %>
+
+<% content_for :description do %>Регистрация создана для тех, кому интересно более глубоко ознакомиться с материалами наших семинаров, для тех, кто хочет принять участие в наших онлайн или живых семинарах и медитациях, для тех, кому близки наши идеи, кто решил стать нашим  соратником, кто хочет сотрудничать или участвовать в деятельности нашего движения, и принять участие в обсуждениях и общении.<% end %>
+
+<% content_for :keywords do %><% end %>
+
+<% content_for :header do %>
+  <h2>Регистрация</h2>
+  <h4 class="subheader">Приветствую тебя, Друг! Ты попал на страницу регистрации, которая создана для тех, кому интересно более глубоко ознакомиться с материалами наших семинаров, для тех, кто хочет принять участие в наших онлайн или живых семинарах и медитациях, для тех, кому близки наши идеи, кто решил стать нашим  соратником, кто хочет сотрудничать или участвовать в деятельности нашего движения, и принять участие в обсуждениях и общении. Будем рады знакомству, взаимодействию и общению с тобой!</h4>
+<% end %>
+
+<div class='twelve columns'>
+
+  <div class='row'>
+    <div class='content eight mobile-four columns centered'>
+      <div class="row">
+        <div class="eight mobile-four columns">
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+            <% if not resource.errors.empty? %>
+            <!-- ERROR MESSAGES -->
+              <div class="row">
+                <div class="twelve columns">
+                  <div class="alert-box secondary">
+                    <%= devise_error_messages! %>
+                    <a href="" class="close">&times;</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          <% end %>
+            <% end %>
 
-          <!-- AUTH FIELDS -->
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Почта:</label>
+            <!-- AUTH FIELDS -->
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Почта:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.email_field :email, :placeholder => "ваша@почта.com", :required => true %>
+              </div>
             </div>
-            <div class="eight mobile-three columns">
-              <%= f.email_field :email, :placeholder => "ваша@почта.com", :required => true %>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Пароль:</label>
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Пароль:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.password_field :password, :placeholder => "входа на сайт", :required => true %>
+              </div>
             </div>
-            <div class="eight mobile-three columns">
-              <%= f.password_field :password, :placeholder => "входа на сайт", :required => true %>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Еще раз:</label>
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Еще раз:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.password_field :password_confirmation, :placeholder => "пароль", :required => true %>
+              </div>
             </div>
-            <div class="eight mobile-three columns">
-              <%= f.password_field :password_confirmation, :placeholder => "пароль", :required => true %>
-            </div>
-          </div>
 
-          <!-- PERSONAL FIELDS -->
-          <div class="row">
-            <div class="content twelve columns">
-              <h5>Личные данные</h5>
+            <!-- PERSONAL FIELDS -->
+            <div class="row">
+              <div class="content twelve columns">
+                <h5>Личные данные</h5>
+              </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Имя:</label>
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Имя:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.text_field :name, :placeholder => "имя и фамилия", :required => true %>
+              </div>
             </div>
-            <div class="eight mobile-three columns">
-              <%= f.text_field :name, :placeholder => "имя и фамилия", :required => true %>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Город:</label>
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Город:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.text_field :city, :placeholder => "название", :required => true %>
+              </div>
             </div>
-            <div class="eight mobile-three columns">
-              <%= f.text_field :city, :placeholder => "название", :required => true %>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Занятие:</label>
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Занятие:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.text_field :occupation, :placeholder => "", :required => true %>
+              </div>
             </div>
-            <div class="eight mobile-three columns">
-              <%= f.text_field :occupation, :placeholder => "", :required => true %>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="four mobile-one columns">
-              <label class="right inline">Телефон:</label>
+            <div class="row">
+              <div class="four mobile-one columns">
+                <label class="right inline">Телефон:</label>
+              </div>
+              <div class="eight mobile-three columns">
+                <%= f.text_field :phone, :placeholder => "+380 50 8114121", :required => true %>
+              </div>
             </div>
-            <div class="eight mobile-three columns">
-              <%= f.text_field :phone, :placeholder => "+380 50 8114121", :required => true %>
-            </div>
-          </div>
 
-          <!-- SUBMIT BUTTON -->
-          <div class="row">
-            <div class="eight columns offset-by-four">
-              <%= f.submit "Вперед!", :class => "button" %>
-            </div>
-          </div>      
-      <% end %>
+            <!-- SUBMIT BUTTON -->
+            <div class="row">
+              <div class="eight columns offset-by-four">
+                <%= f.submit "Вперед!", :class => "button" %>
+              </div>
+            </div>      
+        <% end %>
+        </div>
+
+        <div class="four mobile-four columns">
+          <%= render "users/shared/links" %>
+        </div>    
       </div>
-
-      <div class="four mobile-four columns">
-        <%= render "users/shared/links" %>
-      </div>    
     </div>
   </div>
+
 </div>
