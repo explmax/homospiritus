@@ -17,7 +17,6 @@
                 <li><label>О нас</label></li>
                 <li><%= link_to 'Движение «За Творца»', '/' %></li>
                 <li><%= link_to 'Кто мы и зачем мы',    kto_my_path %></li>
-                <li><%= link_to 'Круг веры',            krug_very_path %></li>
                 <li><%= link_to 'Стиль жизни',          stil_zhizni_path %></li>
               </ul>
 
@@ -29,14 +28,17 @@
               <a href="#">Деятельность</a>
 
               <ul class="dropdown">
-                <li><label>Информация</label></li>
-                <li><%= link_to 'Наши семинары', nashy_seminary_path %></li>
-                <li><%= link_to 'Структуры медиатор-групп', struktury_mediator_grup_path %></li>
-                <li class="divider"></li>
-                <li><label>Мероприятия</label></li>
-                <li><%= link_to 'Видео семинары он-лайн', online_path %></li>
-                <li><%= link_to 'Ежедневные утренние медитации', utrennie_meditacyi_path %></li>
+                <li><label>Семинары</label></li>
+                <li><%= link_to 'Наши живые семинары', nashy_seminary_path %></li>
                 <li><%= link_to 'Школа для ведущих', shkola_vedushih_path %></li>
+                <li class="divider"></li>
+                <li><label>Он-лайн мероприятия</label></li>
+                <li><%= link_to 'Видео семинары он-лайн', online_path %></li>
+                <li><%= link_to 'Ежедневные утренние медитации он-лайн', utrennie_meditacyi_path %></li>
+                <li class="divider"></li>
+                <li><label>Информация</label></li>
+                <li><%= link_to 'Круг веры', krug_very_path %></li>
+                <li><%= link_to 'Подробнее о методе', struktury_mediator_grup_path %></li>
               </ul>
 
             </li>
