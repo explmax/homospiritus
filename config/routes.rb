@@ -19,8 +19,9 @@ Homospiritus::Application.routes.draw do
   get '/online',                  :to => 'activity#online',                   as: 'online'
   get '/utrennie-meditacyi',      :to => 'activity#utrennie_meditacyi',       as: 'utrennie_meditacyi'
   get '/shkola-vedushih',         :to => 'activity#shkola_vedushih',          as: 'shkola_vedushih'
-
-  
+  get '/master-voplosheniya',     :to => 'activity#master_voplosheniya',      as: 'master_voplosheniya'
+  get '/gotov-k-perehodu',        :to => 'activity#gotov_k_perehodu',         as: 'gotov_k_perehodu'
+  get '/zvezdnaya-polovinka',     :to => 'activity#zvezdnaya_polovinka',      as: 'zvezdnaya_polovinka'
 
   # Cooperation
   get '/sotrudnichestvo',                       :to => 'cooperation#sotrudnichestvo',         as: 'sotrudnichestvo'
