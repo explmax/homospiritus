@@ -17,9 +17,9 @@
   <% if @post.tags == 'image' %>
     <%= image_tag @post.featured_image.full, alt: @post.title %>
   <% else %>
-    <% if post.has_featured_image? %>
+    <% if p@ost.has_featured_image? %>
       <p>
-        <%= image_tag post.featured_image_url, :alt=>post.title %>
+        <%= image_tag @post.featured_image_url, :alt=>@post.title %>
       </p>
     <% end %>
   <% end %>
