@@ -57,6 +57,8 @@
       </ul>
 
       <p><%= link_to "Отзывы о наших семинарах", kto_my_path %></p>
+      
+      <%= render partial:'shared/registration_info' %>
     </div>
     <%= render partial: 'shared/sidebar', locals: { active: 5 } %>
   </section>

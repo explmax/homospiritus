@@ -1,0 +1,122 @@
+<!-- Видео семинары он-лайн -->
+<% content_for :title do %>Рассписание он-лайн семинаров - <% end %>
+
+<% content_for :description do %>
+Рассписание он-лайн семинаров
+<% end %>
+
+<% content_for :keywords do %>
+<% end %>
+
+<% content_for :header do %>
+  <h2>Рассписание он-лайн семинаров</h2>
+  <!-- <h4 class="subheader"></h4> -->
+<% end %>
+
+<article class='twelve columns'>
+  <section class='row'>
+    <div class='content nine columns'>
+
+      <p>«Он-лайн семинар — разновидность веб-конференции, проведение он-лайн встреч или презентаций через Интернет в режиме реального времени. Во время веб-конференции каждый из участников находится у своего компьютера, а связь между ними поддерживается через Интернет посредством загружаемого приложения, установленного на компьютере каждого участника, или через веб-приложение. В последнем случае, чтобы присоединиться к конференции, нужно просто ввести URL (адрес сайта). Ссылку для участия вы получите, пройдя регистрацию участника мероприятия. Будем Рады!»</p>
+
+      <h4>Рассписание он-лайн семинаров на неделю</h4>
+      <table style='width:100%;'>
+        <tbody>
+          <tr>
+            <td rowspan=2>Пн</td>
+            <td>7.30</td>
+            <td>1 час</td>
+            <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
+          </tr>
+          <tr>
+            <td>20.30</td>
+            <td>2 часа</td>
+            <td><%= link_to 'Мастер воплощения', master_voplosheniya_path %></td>
+          </tr>
+
+          <tr>
+            <td rowspan=2>Вт</td>
+            <td>7.30</td>
+            <td>1 час</td>
+            <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
+          </tr>
+          <tr>
+            <td>20.30</td>           
+            <td>2 часа</td>
+            <td><%= link_to 'Здоровье. Красота. Бессмертие.', online_path + '#1' %></td>
+          </tr>
+
+          <tr>
+            <td rowspan=2>Ср</td>
+            <td>7.30</td>
+            <td>1 час</td>
+            <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
+          </tr>
+          <tr>
+            <td>20.30</td>           
+            <td>2 часа</td>
+            <td><%= link_to 'Мужчина-женщина и верность', online_path + '#2' %></td>
+          </tr>
+
+          <tr>
+            <td rowspan=2>Чт</td>
+            <td>7.30</td>
+            <td>1 час</td>
+            <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
+          </tr>
+          <tr>
+            <td>20.30</td>           
+            <td>2 часа</td>
+            <td><%= link_to 'Секреты изобилия и благосостояния', online_path + '#3' %></td>
+          </tr>
+
+          <tr>
+            <td rowspan=2>Пт</td>
+            <td>7.30</td>
+            <td>1 час</td>
+            <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
+          </tr>
+          <tr>
+            <td>20.30</td>           
+            <td>2 часа</td>
+            <td><%= link_to '«Звездная Половинка» - встретить, узнать', zvezdnaya_polovinka_path %></td>
+          </tr>
+
+          <tr>
+            <td rowspan=3>Сб</td>
+            <td>10.00</td>
+            <td>1 час</td>
+            <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
+          </tr>
+          <tr>
+            <td>11.00</td>           
+            <td>2 часа</td>
+            <td><%= link_to 'Работа с родом. Как быть счастливым?', online_path + '#4' %></td>
+          </tr>
+          <tr>
+            <td>21.00</td>           
+            <td>1,5 часа</td>
+            <td><%= link_to 'Готов ли ты к Переходу?', gotov_k_perehodu_path %></td>
+          </tr>
+
+          <tr>
+            <td rowspan=2>Вс</td>
+            <td>10.00</td>
+            <td>1 час</td>
+            <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
+          </tr>
+          <tr>
+            <td>11.00</td>           
+            <td>2 часа</td>
+            <td><%= link_to 'Защита от магии и колдовства', online_path + '#5' %></td>
+          </tr>                    
+        </tbody>
+      </table>
+
+      <%= render partial:'shared/registration_info' %>
+  
+    </div>
+    <%= render partial: 'shared/sidebar', locals: { active: 18 } %>
+  </section>
+</article>
+

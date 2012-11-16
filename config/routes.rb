@@ -22,6 +22,7 @@ Homospiritus::Application.routes.draw do
   get '/master-voplosheniya',     :to => 'activity#master_voplosheniya',      as: 'master_voplosheniya'
   get '/gotov-k-perehodu',        :to => 'activity#gotov_k_perehodu',         as: 'gotov_k_perehodu'
   get '/zvezdnaya-polovinka',     :to => 'activity#zvezdnaya_polovinka',      as: 'zvezdnaya_polovinka'
+  get '/rasspisanie',             :to => 'activity#schedule',                 as: 'rasspisanie'
 
   # Cooperation
   get '/sotrudnichestvo',                       :to => 'cooperation#sotrudnichestvo',         as: 'sotrudnichestvo'
