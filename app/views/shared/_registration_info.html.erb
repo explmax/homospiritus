@@ -1,4 +1,17 @@
-<% if not @current_user %>
+<% if user_signed_in? %>
+
+  <% if defined? seminar_id %>
+
+    <% if current_user.seminars.include? seminar_id.to_s %>
+      <div class="alert-box success">Вы записаны на этот семинар.</div>
+    <% else %>
+      <p><%= link_to 'Записаться на семинар', seminar_registration_path(seminar_id), class: 'success button' %></p>
+    <% end %>
+
+
+  <% end %>
+
+<% else %>
   <div class='panel' style='text-align:center;'>
     <p>Для того, чтобы принять участие в семинарах, вам необходимо зарегистрироваться.</p>
     <p><a href="/users/sign_up" class="button">Регистрация</a></p>

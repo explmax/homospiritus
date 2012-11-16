@@ -44,7 +44,7 @@
 
       <p><strong>ЗАПИСЬ ОБЯЗАТЕЛЬНА</strong></p>
 
-        <p>Занятия проводятся по
+        <p>Занятия проводятся по:
         <ul class='disc outside'>
             <li>понедельникам</li>
           <li>  вторникам</li>
@@ -66,7 +66,7 @@
         </ul>
       </p>
 
-      <%= render partial:'shared/registration_info' %>      
+      <%= render partial:'shared/registration_info', locals: { seminar_id: 0 } %>
     </div>
     <%= render partial: 'shared/sidebar', locals: { active: 13 } %>
   </section>

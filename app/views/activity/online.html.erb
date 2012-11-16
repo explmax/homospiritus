@@ -36,6 +36,8 @@
 
       <p>Семинар предназначен для женщин и мужчин.</p>
 
+      <%= render partial:'shared/registration_info', locals: { seminar_id: 2 } %>
+
 
 
       <h5 id='2'>Мужчина-женщина и верность</h5>
@@ -60,6 +62,7 @@
 
       <p>Семинар предназначен как для пар, так и для тех, кто стремиться создать пару – мужчин и женщин.</p>
 
+      <%= render partial:'shared/registration_info', locals: { seminar_id: 3 } %>
 
 
 
@@ -83,6 +86,8 @@
 
       <p>Мастер-класс предназначен для женщин и мужчин любого социального положения и достатка.</p>
 
+      <%= render partial:'shared/registration_info', locals: { seminar_id: 4 } %>
+
 
 
       <h5 id='4'>Работа с родом. Как быть счастливым?</h5>
@@ -103,6 +108,7 @@
 
       <p>Ждем Вас на мастер-классе «Дети и Родители».</p>
 
+      <%= render partial:'shared/registration_info', locals: { seminar_id: 6 } %>
 
 
 
@@ -123,7 +129,7 @@
 
       <p>Ждем Вас!</p>
 
-      <%= render partial:'shared/registration_info' %>
+      <%= render partial:'shared/registration_info', locals: { seminar_id: 8 } %>
     </div>
     <%= render partial: 'shared/sidebar', locals: { active: 7 } %>
   </section>

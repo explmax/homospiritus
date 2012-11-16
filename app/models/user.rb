@@ -15,10 +15,12 @@ class User
 
 
   ## Additional fields
-  field :name,      :type => String
-  field :occupation, :type => String
-  field :phone,     :type => String
-  field :city,      :type => String
+  field :name,        :type => String
+  field :occupation,  :type => String
+  field :phone,       :type => String
+  field :city,        :type => String
+
+  field :seminars,    type: Array, default: []
 
   validates_presence_of :name
   validates_presence_of :occupation
@@ -52,4 +54,15 @@ class User
 
   ## Token authenticatable
   # field :authentication_token, :type => String
+
+  def add_seminar(seminar_index)
+    unless seminars.include? seminar_index
+      seminars << seminar_index
+      save
+    end
+  end
+
+
+
+
 end

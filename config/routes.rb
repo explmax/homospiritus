@@ -1,8 +1,18 @@
 #encoding: UTF-8
 Homospiritus::Application.routes.draw do
+  # Admin
+  mount_activeadmin_settings
+  ActiveAdmin.routes(self)
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+
+
+  # users auth
   devise_for :users
 
 
+  # registration
+  get '/seminar-registration/:id', :to => 'users#seminar_registration', as: 'seminar_registration'
 
 
   # About Us
@@ -45,9 +55,4 @@ Homospiritus::Application.routes.draw do
 
 
 
-  # Admin
-  mount_activeadmin_settings
-  ActiveAdmin.routes(self)
-
-  devise_for :admin_users, ActiveAdmin::Devise.config
 end
