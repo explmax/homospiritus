@@ -28,7 +28,7 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and  @current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "0" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
@@ -40,7 +40,7 @@
             <td>2 часа</td>
             <td><%= link_to 'Мастер воплощения', master_voplosheniya_path %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "1" %>
+              <% if user_signed_in? and current_user.seminars.include? "1" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(1), class: 'success button small' %>
@@ -54,7 +54,7 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "0" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
@@ -66,7 +66,7 @@
             <td>2 часа</td>
             <td><%= link_to 'Здоровье. Красота. Бессмертие.', online_path + '#1' %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "2" %>
+              <% if user_signed_in? and current_user.seminars.include? "2" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(2), class: 'success button small' %>
@@ -80,7 +80,7 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "0" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
@@ -92,7 +92,7 @@
             <td>2 часа</td>
             <td><%= link_to 'Мужчина-женщина и верность', online_path + '#2' %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "3" %>
+              <% if user_signed_in? and current_user.seminars.include? "3" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(3), class: 'success button small' %>
@@ -106,7 +106,7 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "0" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
@@ -118,7 +118,7 @@
             <td>2 часа</td>
             <td><%= link_to 'Секреты изобилия и благосостояния', online_path + '#3' %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "4" %>
+              <% if user_signed_in? and current_user.seminars.include? "4" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(4), class: 'success button small' %>
@@ -132,7 +132,7 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "0" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
@@ -144,7 +144,7 @@
             <td>2 часа</td>
             <td><%= link_to '«Звездная Половинка» - встретить, узнать', zvezdnaya_polovinka_path %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "5" %>
+              <% if user_signed_in? and current_user.seminars.include? "5" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(5), class: 'success button small' %>
@@ -158,7 +158,7 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "0" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
@@ -170,7 +170,7 @@
             <td>2 часа</td>
             <td><%= link_to 'Работа с родом. Как быть счастливым?', online_path + '#4' %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "6" %>
+              <% if user_signed_in? and current_user.seminars.include? "6" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(6), class: 'success button small' %>
@@ -182,7 +182,7 @@
             <td>1,5 часа</td>
             <td><%= link_to 'Готов ли ты к Переходу?', gotov_k_perehodu_path %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "7" %>
+              <% if user_signed_in? and current_user.seminars.include? "7" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(7), class: 'success button small' %>
@@ -196,7 +196,7 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "0" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
@@ -208,7 +208,7 @@
             <td>2 часа</td>
             <td><%= link_to 'Защита от магии и колдовства', online_path + '#5' %></td>
             <td>
-              <% if user_signed_in? and @current_user.seminars.include? "8" %>
+              <% if user_signed_in? and current_user.seminars.include? "8" %>
                 <span class="success label">Вы записаны</span>
               <% else %>
                 <%= link_to 'Записаться на семинар', seminar_registration_path(8), class: 'success button small' %>
