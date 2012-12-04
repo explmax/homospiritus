@@ -62,7 +62,21 @@ class User
     end
   end
 
+  scope :morning_mon, any_in(:seminars => ['0'])
+  scope :morning_tue, any_in(:seminars => ['9'])
+  scope :morning_wed, any_in(:seminars => ['10'])
+  scope :morning_thu, any_in(:seminars => ['11'])
+  scope :morning_fri, any_in(:seminars => ['12'])
+  scope :morning_sat, any_in(:seminars => ['13'])
+  scope :morning_sun, any_in(:seminars => ['14'])
 
-
+  scope :s1_mon, any_in(:seminars => ['1'])
+  scope :s2_tue, any_in(:seminars => ['2'])
+  scope :s3_wed, any_in(:seminars => ['3'])
+  scope :s4_thu, any_in(:seminars => ['4'])
+  scope :s5_fri, any_in(:seminars => ['5'])
+  scope :s6_sat, any_in(:seminars => ['6'])
+  scope :s7_sat, any_in(:seminars => ['7'])
+  scope :s8_sun, any_in(:seminars => ['8'])
 
 end

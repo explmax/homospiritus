@@ -1,3 +1,5 @@
+#coding:utf-8
+
 ActiveAdmin::Dashboards.build do
 
   # Define your dashboard sections here. Each block will be
@@ -7,14 +9,128 @@ ActiveAdmin::Dashboards.build do
   # == Simple Dashboard Section
   # Here is an example of a simple dashboard section
   #
-  #   section "Recent Posts" do
-  #     ul do
-  #       Post.recent(5).collect do |post|
-  #         li link_to(post.title, admin_post_path(post))
-  #       end
-  #     end
-  #   end
+  section "СоТворение Будущего (Понедельник)", :priority => 1 do
+    ul do
+      User.morning_mon.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "СоТворение Будущего (Вторник)", :priority => 2 do
+    ul do
+      User.morning_tue.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "СоТворение Будущего (Среда)", :priority => 3 do
+    ul do
+      User.morning_wed.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "СоТворение Будущего (Четверг)", :priority => 4 do
+    ul do
+      User.morning_thu.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "СоТворение Будущего (Пятница)", :priority => 5 do
+    ul do
+      User.morning_fri.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "СоТворение Будущего (Суббота)", :priority => 6 do
+    ul do
+      User.morning_sat.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
   
+  section "СоТворение Будущего (Восскресенье)", :priority => 7 do
+    ul do
+      User.morning_sun.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+
+
+  section "Мастер воплощения (Понедельник)", :priority => 8 do
+    ul do
+      User.s1_mon.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "Здоровье. Красота. Бессмертие. (Вторник)", :priority => 9 do
+    ul do
+      User.s2_tue.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "Мужчина-женщина и верность (Среда)", :priority => 10 do
+    ul do
+      User.s3_wed.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "Секреты изобилия и благосостояния (Четверг)", :priority => 11 do
+    ul do
+      User.s4_thu.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "«Звездная Половинка» - встретить, узнать (Пятница)", :priority => 12 do
+    ul do
+      User.s5_fri.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "Работа с родом. Как быть счастливым? (Cуббота)", :priority => 13 do
+    ul do
+      User.s6_sat.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "Готов ли ты к Переходу? (Cуббота)", :priority => 14 do
+    ul do
+      User.s7_sat.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
+  section "Защита от магии и колдовства (Восскресенье)", :priority => 15 do
+    ul do
+      User.s8_sun.each do |u|
+        li link_to(u.name, admin_member_path(u))
+      end
+    end
+  end
+
   # == Render Partial Section
   # The block is rendered within the context of the view, so you can
   # easily render a partial rather than build content in ruby.

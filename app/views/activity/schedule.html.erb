@@ -55,10 +55,10 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "9" %>
                 <%= link_to 'Комната семинара', 'http://vcp2.videocontrolpanel.net/?meeting=7298234', target: '_blank' %>
               <% else %>
-                <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
+                <%= link_to 'Записаться на семинар', seminar_registration_path(9), class: 'success button small' %>
               <% end %>
             </td>
           </tr>
@@ -81,10 +81,10 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "10" %>
                 <%= link_to 'Комната семинара', 'http://vcp2.videocontrolpanel.net/?meeting=7298234', target: '_blank' %>
               <% else %>
-                <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
+                <%= link_to 'Записаться на семинар', seminar_registration_path(10), class: 'success button small' %>
               <% end %>
             </td>
           </tr>
@@ -107,10 +107,10 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "11" %>
                 <%= link_to 'Комната семинара', 'http://vcp2.videocontrolpanel.net/?meeting=7298234', target: '_blank' %>
               <% else %>
-                <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
+                <%= link_to 'Записаться на семинар', seminar_registration_path(11), class: 'success button small' %>
               <% end %>
             </td>
           </tr>
@@ -133,10 +133,10 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "12" %>
                 <%= link_to 'Комната семинара', 'http://vcp2.videocontrolpanel.net/?meeting=7298234', target: '_blank' %>
               <% else %>
-                <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
+                <%= link_to 'Записаться на семинар', seminar_registration_path(12), class: 'success button small' %>
               <% end %>
             </td>
           </tr>
@@ -159,10 +159,10 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "13" %>
                 <%= link_to 'Комната семинара', 'http://vcp2.videocontrolpanel.net/?meeting=7298234', target: '_blank' %>
               <% else %>
-                <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
+                <%= link_to 'Записаться на семинар', seminar_registration_path(13), class: 'success button small' %>
               <% end %>
             </td>
           </tr>
@@ -197,10 +197,10 @@
             <td>1 час</td>
             <td><%= link_to 'СоТворение Будущего', utrennie_meditacyi_path %></td>
             <td>
-              <% if user_signed_in? and current_user.seminars.include? "0" %>
+              <% if user_signed_in? and current_user.seminars.include? "14" %>
                 <%= link_to 'Комната семинара', 'http://vcp2.videocontrolpanel.net/?meeting=7298234', target: '_blank' %>
               <% else %>
-                <%= link_to 'Записаться на семинар', seminar_registration_path(0), class: 'success button small' %>
+                <%= link_to 'Записаться на семинар', seminar_registration_path(14), class: 'success button small' %>
               <% end %>
             </td>
           </tr>
@@ -218,6 +218,8 @@
           </tr>                    
         </tbody>
       </table>
+
+      <p>Для участия в семинаре онлайн вам будет в ближайшее время выслан емейл со ссылкой на веб-комнату.</p>
 
       <%= render partial:'shared/registration_info' %>
   
