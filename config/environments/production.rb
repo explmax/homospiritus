@@ -62,3 +62,5 @@ Homospiritus::Application.configure do
   config.active_support.deprecation = :notify
 
 end
+
+Rails.application.routes.default_url_options[:host]= 'homospiritus.co'
