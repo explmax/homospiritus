@@ -32,9 +32,6 @@ gem "mini_magick"
 gem "rmagick"
 gem "asset_sync"
 
-# Mail
-gem "pony"
-
 
 group :production do
   gem 'thin'
