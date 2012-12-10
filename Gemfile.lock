@@ -195,6 +195,8 @@ GEM
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
+    pony (1.4)
+      mail (> 2.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -273,6 +275,7 @@ DEPENDENCIES
   mongoid (~> 3.0.5)
   mongoid_search
   moped!
+  pony
   rails (= 3.2.8)
   rmagick
   sass-rails (~> 3.2.3)
