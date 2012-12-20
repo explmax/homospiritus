@@ -18,3 +18,5 @@
 
 app/assets/images/posters/
 lib/tasks/image_names/
+
+.sass-cache
