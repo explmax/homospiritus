@@ -1,0 +1,58 @@
+@import "compass/reset";
+
+
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic&subset=latin,cyrillic);
+
+
+body                                  { font-size:16px;
+}
+
+article                               { padding:0 1em;
+                                        padding-bottom:10em;
+
+  header                              { text-align:center;
+                                        max-width:900px;
+                                        margin:0 auto;
+                                        font-family:'Playfair Display', serif;
+
+    h1                                { color:#444;
+                                        font-size:2.8em;
+                                        line-height: 1.25em;
+                                        margin: 0 auto .5em;
+                                        padding-top:2.2em;
+    }
+
+    h2                                { color:#999;
+                                        font-style:italic;
+                                        font-size:1.25em;
+                                        margin:0 auto 1em;
+                                        opacity:.9;
+    }
+  }
+
+  .content                            { max-width:700px;
+                                        margin:0 auto;
+                                        color:#333;
+                                        font-family: Times, sans-serif;
+
+    p, li                             { font-size:1.3em;
+                                        line-height:1.6em;
+    }
+
+    p                                 { margin-bottom:0.2em;
+    }
+
+    li                                { padding-left:1em;
+      &:before                        { content:"— ";
+      }
+    }
+
+    p + p                             { text-indent: 2em;
+    }
+
+    h2                                { font-size: 1.75em;
+                                        line-height: 1.3em;
+                                        margin: 1em auto .5em;
+    }
+  }
+}
