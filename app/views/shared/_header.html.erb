@@ -65,6 +65,7 @@
                 <% @blog_categories.all.each do |c| %>
                   <li><%= link_to c.name, blog_category_path(c.slug) %>
                 <% end %>
+                <!--
                 <li class="divider"></li>
                 <li><label>Волшебные слова и инструкции</label></li>
                 <li><%= link_to 'Утром', utro_path %></li>
@@ -83,6 +84,7 @@
                   </a>
                 </li>
                 <li><%= link_to 'На ночь', na_noch_path %></li>
+                -->
               </ul>
 
             </li>
