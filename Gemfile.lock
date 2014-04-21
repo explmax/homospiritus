@@ -84,9 +84,6 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
-    asset_sync (0.5.0)
-      activemodel
-      fog
     aws-s3 (0.6.3)
       builder
       mime-types
@@ -261,7 +258,6 @@ DEPENDENCIES
   activeadmin (~> 0.4.4)
   activeadmin-blog
   activeadmin-mongoid!
-  asset_sync
   aws-s3
   carrierwave-mongoid!
   coffee-rails (~> 3.2.1)
